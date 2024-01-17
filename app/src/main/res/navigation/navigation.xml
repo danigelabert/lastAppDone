@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation"
+    app:startDestination="@id/catalegFragment">
+
+    <fragment
+        android:id="@+id/catalegFragment"
+        android:name="com.danigelabert.lastappdone.ui.CatalegFragment"
+        android:label="CatalegFragment" >
+        <action
+            android:id="@+id/action_catalegFragment_to_insertCatalegFragment"
+            app:destination="@id/insertCatalegFragment" />
+        <action
+            android:id="@+id/action_catalegFragment_to_editCatalegFragment"
+            app:destination="@id/editCatalegFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editCatalegFragment"
+        android:name="com.danigelabert.lastappdone.ui.EditCatalegFragment"
+        android:label="EditCatalegFragment" >
+        <action
+            android:id="@+id/action_editCatalegFragment_to_catalegFragment"
+            app:destination="@id/catalegFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/insertCatalegFragment"
+        android:name="com.danigelabert.lastappdone.ui.InsertCatalegFragment"
+        android:label="InsertCatalegFragment" >
+        <action
+            android:id="@+id/action_insertCatalegFragment_to_catalegFragment"
+            app:destination="@id/catalegFragment" />
+    </fragment>
+</navigation>
